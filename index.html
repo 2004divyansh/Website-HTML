@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <img src="your-photo.jpg" alt="My Photo" class="profile-pic"/>
+    <h1>Your Name</h1>
+    <p>Brief description about you</p>
+    <div class="social-icons">
+      <!-- Existing social links -->
+      <a href="https://linkedin.com/in/..." class="social-link">
+        <img src="linkedin.png" alt="LinkedIn" />
+      </a>
+
+      <a href="https://github.com/..." class="social-link">
+        <img src="github.png" alt="GitHub" />
+      </a>
+
+      <img src="assets/cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal">
+
+      <!-- Email reveal target -->
+      <p id="demail" style="opacity: 0; transition: opacity 0.3s; margin-top: 10px; color: white; text-align: center;"></p>
+
+    </div>
+  </header>
+
+  <!-- Experience & Education -->
+  <section class="timeline-section">
+  <h2>Timeline</h2>
+  <div class="timeline">
+    
+    <div class="timeline-item left">
+      <img src="company-logo.png" alt="Company Logo">
+      <div class="timeline-content">
+        <h3>Software Engineer at XYZ Corp</h3>
+        <span class="timeline-date">2024 – Present</span>
+        <p>Working on scalable backend systems and machine learning pipelines.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <img src="university-logo.png" alt="University Logo">
+      <div class="timeline-content">
+        <h3>M.Tech in Computer Science</h3>
+        <span class="timeline-date">2022 – 2024</span>
+        <p>Specialized in AI and Data Science at ABC University.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <img src="college-logo.png" alt="College Logo">
+      <div class="timeline-content">
+        <h3>B.Tech in Computer Science</h3>
+        <span class="timeline-date">2018 – 2022</span>
+        <p>Graduated with honors from DEF Institute.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Educational Videos -->
+  <section class="grid-section">
+    <h2>Educational Videos</h2>
+    <div class="grid">
+      <div class="card"><img src="thumb1.jpg" alt=""><p>Video Title</p></div>
+      <!-- Duplicate .card for more -->
+    </div>
+  </section>
+
+  <!-- Publications & Blogs -->
+  <section class="grid-section">
+    <h2>Publications & Blog Posts</h2>
+    <div class="grid">
+      <div class="card"><img src="pub1.jpg" alt=""><p>Blog or Paper Title</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li><a href="#">Project 1 Title</a></li>
+      <li><a href="#">Project 2 Title</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer Description -->
+  <footer class="footer">
+    <h3>About This Website</h3>
+    <p>This portfolio is created using only HTML and CSS. Designed to be clean, fast, and mobile-friendly.</p>
+  </footer>
+
+  <script type="text/javascript">
+  const rot13 = (message) => {
+    const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+    return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
+  };
+
+  var e_is_shown = false;
+
+  document.getElementById('iemail').addEventListener("click", function () {
+    let demail = document.getElementById('demail');
+    let msg = "qvilnafuqhorl1892@tznvy.pbz<oe>Vs lbh jnag gb ernq zl cebwrpgf be sbyybj hc, cynl jvgu zl vzntr be fraq zr na rznvy.";
+
+    demail.innerHTML = rot13(msg).replace("<br>", "<br/>");
+    demail.style.opacity = e_is_shown ? 0 : 1;
+    e_is_shown = !e_is_shown;
+  });
+  </script>
+
+</body>
+</html>
